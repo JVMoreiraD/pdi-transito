@@ -4,7 +4,7 @@ import numpy as np
 # import PIL
 import sys
 
-imgRGB = cv.imread(cv.samples.findFile("Dataset/8.jpg"))
+imgRGB = cv.imread(cv.samples.findFile("Dataset/25.jpg"))
 
 # Checks if the image exist
 if imgRGB is None:
@@ -42,13 +42,15 @@ print("size percentage:" + str((blurred_img.size * 10)/100.0))
 
 # draw image contours
 for contour in contours:
-    area = cv.contourArea(contour)
-    # TODO: fazer função pra descobrir se o objeto tem tamanho o suficiente para ser contornado
-    if area > 20000:
-        cv.drawContours(blurred_img,contour,-1,(0,255,0),2,cv.LINE_AA)            
-    print(area)
-
-
+    contourn_area = cv.contourArea(contour)
+    approx = cv.approxPolyDP(contour, 0.01 * cv.arcLength(contour, True), True)
+    # new value
+    if contourn_area >= 1500:
+        x = approx.ravel()[0]
+        y = approx.ravel()[1]
+        if len(approx) == 8:
+            cv.drawContours(blurred_img,contour,-1,(0,255,0),2,cv.LINE_AA)
+            cv.putText(blurred_img, "Placa", (x,y), cv.FONT_HERSHEY_COMPLEX, 0.5, (0,0,0))
 # Show images
 # cv.imshow("Display window HSV", imgHSV)
 # cv.imshow("Display window RGB", imgRGBs)
@@ -60,8 +62,3 @@ cv.imshow('blur',blurred_img)
  
 cv.waitKey(0)
 cv.destroyAllWindows()
-#find out where you have a specific color 
-
-
-
-
