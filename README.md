@@ -21,8 +21,9 @@
 <br>
 
 # Links importantes:
-    Artigo original: http://ojs.unirg.edu.br/index.php/1/article/view/2280
-    dataset original: https://github.com/mbasilyan/Stop-Sign-Detection
+Artigo original: http://ojs.unirg.edu.br/index.php/1/article/view/2280
+
+dataset original: https://github.com/mbasilyan/Stop-Sign-Detection
 
 ## O que foi feito de diferente ?
 
@@ -46,3 +47,29 @@
     Resultado com glitch: Quando conseguimos a placa mas algo no contorno não saiu como esperado.
     Resultado parcial: Quando existe mais de uma placa na imagem e nem todas são identificadas.
     Falhas: Quando nenhum objeto é contornado e nenhuma placa é identificada.
+
+# Imagem Com resultado Esperado
+![Imagem Com Resultado esperado](https://raw.githubusercontent.com/JVMoreiraD/pdi-transito/master/samples/result11.jpg)
+## Imagem acima é uma das imagens que o artigo original não conseguiu identificar por baixa saturação da imagem de entrada.
+
+<br>
+
+# Imagem com Glitch
+## Tivemos dois tipos de glitch um que achamos a placa e ele acaba identificando as letras dentro dela como placas e o caso em que identificamos somente as letras como placas
+
+![Imagem com Glitch 1](https://raw.githubusercontent.com/JVMoreiraD/pdi-transito/master/samples/glitch04.jpg)
+![Imagem com Glitch 2](https://raw.githubusercontent.com/JVMoreiraD/pdi-transito/master/samples/glitch03.jpg)
+
+<br>
+
+# Imagem Com Resultado Parcial
+
+![Imagem com Resultado Parcial](https://raw.githubusercontent.com/JVMoreiraD/pdi-transito/master/samples/acertoParcial01.jpg)
+
+# Imagem em que o algoritmo falha
+
+![Falha](https://raw.githubusercontent.com/JVMoreiraD/pdi-transito/master/samples/falha05.jpg)
+
+<br>
+
+# Considerações
