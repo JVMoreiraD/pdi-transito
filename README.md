@@ -72,4 +72,8 @@ dataset original: https://github.com/mbasilyan/Stop-Sign-Detection
 
 <br>
 
-# Considerações
+# Autores
+<a href="https://github.com/JVMoreiraD/pdi-transito/graphs/contributors"><img src="https://contrib.rocks/image?repo=JVMoreiraD/pdi-transito" /></a>
+
+
+
